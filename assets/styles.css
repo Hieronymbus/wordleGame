@@ -1,8 +1,16 @@
+header {
+    display: flex;
+}
+@font-face {
+    font-family: VintageRoveryRegular;
+    src: url(icons/vintage_rovery/Vintage\ Rovery.otf);
+}
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
+    font-family: VintageRoveryRegular ;
 }
 
 h1 {
@@ -21,7 +29,6 @@ h1 {
     border-radius: 3.5px;
     align-items: center;
     justify-content: center;
-    
 }
 
 #guessContainer {
@@ -33,14 +40,38 @@ h1 {
 }
 
 .letterBox {
-    border: 2px solid black;
+    color:rgb(229,229,229);
+    background-color: rgb(181,175,161);
     border-radius: 3.5px;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 5px;
+    font-weight: bolder;
+    font-size: 1.6rem;
 }
 
 #alphabetContainer {
-    width: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
     margin-top: 40px;
+    
+}
+.keyboard-row{
+    margin-bottom: 15px;
+}
+
+
+.alphabet,#checkButton,#backSpaceButton {
+    border:none;
+    background-color: white;
+    color: rgb(211,206,194);
+    font-size:15px ;
+    font-weight: bolder;
+    margin:1px;
+}
+#checkButton{
+    color: rgb(203,47,47);
 }
