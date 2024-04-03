@@ -48,6 +48,16 @@ function compareWordLetters(correctAnswerArr, collection, keyboard) {
             document.getElementById(collection[i].innerHTML).style.color = black;
         }
     }
+    let guessWord = "";
+
+    
+    for (let i = 0; i < 5; i++) {
+        guessWord += collection[i].innerHTML;
+    }
+    if (guessWord == word.toUpperCase() ){
+        document.getElementById("alertBox").style.display = "flex"
+        document.getElementById("alertBox").innerHTML = "CORRECT WORD"
+    } 
 }
 
 function handleCheck() {
@@ -57,6 +67,7 @@ function handleCheck() {
     console.log(correctAnswerArr)
     console.log(guessCounter)
     console.log(letterCounter)
+    console.log(word)
 
     let guessWord = "";
 
@@ -64,7 +75,7 @@ function handleCheck() {
     for (let i = 0; i < 5; i++) {
         guessWord += collection[i].innerHTML;
     }
-    console.log(guessWord)
+    
 
     if (letterCounter == 5 && WORDS.includes(guessWord.toLowerCase())) {
         
@@ -80,11 +91,16 @@ function handleCheck() {
         }, 1100);
     } else {
         document.getElementById("alertBox").style.display = "flex"
-        document.getElementById("alertBox").innerHTML = "*Enter 5 letters"
+        document.getElementById("alertBox").innerHTML = "Enter 5 letters"
         setTimeout(function () {
             document.getElementById("alertBox").style.display = "none"
         }, 1100);
     }
+
+    // if (guessWord == word.toUpperCase() ){
+    //     document.getElementById("alertBox").style.display = "flex"
+    //     document.getElementById("alertBox").innerHTML = "CORRECT WORD, YOU WIN THE GAME"
+    // } 
     
 }
 
@@ -117,3 +133,16 @@ document.querySelectorAll(".alphabet").forEach(item => {
 document.getElementById("checkButton").addEventListener("click",handleCheck);
 document.getElementById("backSpaceButton").addEventListener("click",handleBackspace);
 
+document.getElementById("burgerMenuPopUpButton").addEventListener("click", () => {
+    document.getElementById("burgerMenuPopUp").style.display = "block"
+})
+document.getElementById("burgerMenuPopUp").addEventListener("mouseleave",()=>{
+    document.getElementById("burgerMenuPopUp").style.display = "none"
+})
+
+document.getElementById("displayHelpButton").addEventListener("click",() => {
+    document.getElementById("helpPopUp").style.display = "block"
+} )
+document.getElementById("helpPopUp").addEventListener("mouseleave",()=>{
+    document.getElementById("helpPopUp").style.display = "none"
+})
