@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="assets/script.js" async defer type="module"></script>
-    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/main.css">
 </head>
 <body>
     <header>
         <div>
             <button id="burgerMenuPopUpButton" class="navButton" >&#9776;</button>
             <div id="burgerMenuPopUp"> 
-                <div class="menuButton" onclick="window.location.reload()">Play Again</button></div>
+                <div class="menuButton" onclick="window.location.reload()">New Game</button></div>
                 <div class="menuButton">DO NOT CLICK HERE</div>
-                <div class="menuButton">prawnhub</div>
+                <div class="menuButton">cathub</div>
             </div>
             <button id="displayHelpButton" class="navButton">?</button>
             <div id="helpPopUp">
@@ -22,10 +22,9 @@
             </div>
         </div>
         <div>
-            <button class="navButton"><img src="assets/iconsFontsImages/bar-chart.png" width="20px"></button>
+            <button class="navButton"><img id="barGraphIMG" src="assets/iconsFontsImages/bar-chart.png" ></button>
             <button class="navButton">&#9881</button>
         </div>
-
     </header>
     <main>
         <h1>WORDLE</h1>

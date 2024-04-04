@@ -1,0 +1,9 @@
+:root {
+    --clr-navButton-bg:rgb(255,255,255);
+    --clr-textImportant-red:rgb(203,45,44);
+    --clr-alertBox-text-border:purple;
+    --clr-letterBox-text:rgb(229,229,229);
+    --clr-letterBox-bg:rgb(181,175,161);
+    --clr-keyBoardKeys-bg:rgb(255,255,255);
+    --clr-keyBoardKeys-text:rgb(211,206,194);    
+}
