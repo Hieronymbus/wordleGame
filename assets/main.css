@@ -1,4 +1,4 @@
-@import "/assets/colors.css";
+@import "./colors.css";
 @font-face {
     font-family: VintageRoveryRegular;
     src: url(iconsFontsImages/vintage_rovery/Vintage\ Rovery.otf);
